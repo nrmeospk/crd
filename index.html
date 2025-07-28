@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescent Community Radio 97FM – Community Radio Station Rochdale 97FM</title>
+    <meta name="description" content="Crescent Community Radio - Grassroots community radio station broadcasting on 97.0 FM in Rochdale, serving the local Muslim community and broader multicultural audience since 1999.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Crescent Community Radio 97FM">
+    <meta property="og:description" content="Community Radio Station Rochdale 97FM - Broadcasting in English and community languages since 1999">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.crescentradio.net/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5530 0%, #1a3a1d 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .live-indicator {
+            background: #e74c3c;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            background: #1a3a1d;
+            padding: 15px 0;
+            border-top: 2px solid #4CAF50;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: #4CAF50;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 29, 0.8), rgba(26, 58, 29, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234CAF50" width="1200" height="400"/><circle fill="%232c5530" cx="200" cy="100" r="50" opacity="0.3"/><circle fill="%232c5530" cx="800" cy="300" r="80" opacity="0.2"/><circle fill="%232c5530" cx="1000" cy="150" r="60" opacity="0.3"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .frequency-badge {
+            background: #e74c3c;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #2c5530;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-card h4 {
+            color: #2c5530;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: #2c5530;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-card h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #4CAF50;
+        }
+
+        /* Audio Player */
+        .audio-player {
+            background: #2c5530;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .audio-player h4 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .play-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3a1d;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #4CAF50;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c5530;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .frequency-badge {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Skip to content accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #4CAF50;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 0 0 8px 0;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">CR</div>
+                    <div class="logo-text">
+                        <h1>Crescent Community Radio</h1>
+                        <p>Community Radio Station Rochdale 97FM</p>
+                    </div>
+                </div>
+                <div class="live-indicator">
+                    🔴 LIVE NOW
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-menu">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#programs">Programs</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#listen">Listen Live</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Broadcasting Since 1999</h2>
+            <p>Grassroots community radio station serving Rochdale's multicultural community with programming in English and community languages</p>
+            <div class="frequency-badge">97.0 FM</div>
+            <p>24/7 Community Broadcasting</p>
+        </div>
+    </section>
+
+    <main class="main-content" id="main-content">
+        <div class="container">
+            <!-- Audio Player Section -->
+            <div class="audio-player" id="listen">
+                <h4>🎵 Listen Live to Crescent Radio 97FM</h4>
+                <p>Broadcasting live from Rochdale to the world</p>
+                <button class="play-button" onclick="toggleAudio()">▶️ Play Live Stream</button>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">
+                    📻 Also available on 97.0 FM in Rochdale area
+                </p>
+            </div>
+
+            <!-- About Section -->
+            <section class="section" id="about">
+                <h3>About Crescent Community Radio</h3>
+                <p>Welcome to the online home of <strong>Crescent Community Radio</strong>, a grassroots, community organisation. We first hit the airwaves in December 1999 regularly broadcasting during Ramadhan and in Milad to celebrate the birthday of the Holy Prophet Muhammad (SAW) but since then, have grown from strength to strength.</p>
+                
+                <p>Broadcasting in English and other community languages, we respond to our listeners' health and wellbeing and encourage as much participation as possible from all members of the local community, regardless of religious inclination.</p>
+                
+                <p><strong>We're here to serve as many different communities as possible.</strong> Our mission is to provide a platform for voices that might otherwise go unheard, fostering understanding and unity across Rochdale's diverse population.</p>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="section" id="projects">
+                <h3>Our Community Projects</h3>
+                <p>Here is a taster of some of our recent activities that demonstrate our commitment to community service:</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>📱 Digital Inclusion Project</h4>
+                        <p>Helping people aged 55 and above access digital technologies, bridging the digital divide in our community and ensuring everyone can participate in our increasingly connected world.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>🏥 Health Awareness Programme</h4>
+                        <p>A multitude of health professionals outlining and accessing audiences that often are in the most need. Providing vital health information to underserved communities.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>🆘 Covid Crisis Helpline</h4>
+                        <p>We were one of the first community organisations up and running in March 2020, helping to deliver urgent food and medicines to isolated individuals during the pandemic.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>📚 Oral History Projects</h4>
+                        <p>We have completed two recent projects, Kashmir Lives and East African Lives, documenting the history and current issues affecting these communities. These projects reflect our desire to be seen as a heritage organisation.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>🌍 Spanish Project</h4>
+                        <p>A passionate and hard working community, Crescent Radio is now providing a platform and some co-ordination for this community of recent migrants from South American Spanish speaking countries who are an increasing minority within the local area.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>⭐ Local Legends</h4>
+                        <p>Community spotlight content celebrating the amazing individuals and stories that make Rochdale special. Highlighting local heroes and their contributions to our community.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px; font-style: italic;">The list is ongoing and continuous. Watch this space for more ongoing and exciting projects. Our live radio shows go hand in hand with our community work - without our community, there is no radio.</p>
+            </section>
+
+            <!-- Programs Section -->
+            <section class="section" id="programs">
+                <h3>Our Programming</h3>
+                <p>Crescent Community Radio broadcasts 24/7 with diverse programming that reflects our multicultural community:</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>🕌 Religious Programming</h4>
+                        <p>Islamic content including Quran recitation, religious discussions, and community spiritual guidance during Ramadhan and special occasions.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>🌐 Multilingual Shows</h4>
+                        <p>Broadcasting in English and various community languages to serve our diverse audience and ensure everyone feels included.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>🎵 Music & Culture</h4>
+                        <p>Celebrating the rich musical heritage of our communities with traditional and contemporary music from around the world.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>📰 Community News</h4>
+                        <p>Local news, events, and information relevant to Rochdale's communities, keeping everyone connected and informed.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section" id="contact">
+                <h3>Get in Touch</h3>
+                <p>We'd love to hear from you! Whether you want to get involved, request a song, or just say hello, here's how you can reach us:</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>📞 Phone Numbers</h4>
+                        <ul class="contact-info">
+                            <li><strong>Main Line:</strong> <a href="tel:01706340385">01706 340385</a></li>
+                            <li><strong>Studio Requests:</strong> <a href="tel:01706340786">01706 340786</a></li>
+                            <li><strong>Text Line:</strong> <a href="sms:07817229862">07817 229862</a></li>
+                            <li><strong>Faheem (Involvement):</strong> <a href="tel:07884053544">07884 053544</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>📧 Email Addresses</h4>
+                        <ul class="contact-info">
+                            <li><strong>General Info:</strong> <a href="mailto:info@crescentradio.net">info@crescentradio.net</a></li>
+                            <li><strong>Studio:</strong> <a href="mailto:studio@crescentradio.net">studio@crescentradio.net</a></li>
+                            <li><strong>Feedback:</strong> <a href="mailto:feedback@crescentradio.net">feedback@crescentradio.net</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>📻 Broadcasting Info</h4>
+                        <ul class="contact-info">
+                            <li><strong>Frequency:</strong> 97.0 FM</li>
+                            <li><strong>Coverage:</strong> Rochdale & Surrounding Areas</li>
+                            <li><strong>Online:</strong> Live Streaming Available</li>
+                            <li><strong>Schedule:</strong> 24/7 Broadcasting</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crescent Community Radio</h4>
+                    <p>Broadcasting on 97.0 FM since 1999</p>
+                    <p>Serving Rochdale's multicultural community with programming in English and community languages.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="#programs">Programs</a></p>
+                    <p><a href="#projects">Projects</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community Focus</h4>
+                    <p>🏥 Health & Wellbeing</p>
+                    <p>📱 Digital Inclusion</p>
+                    <p>📚 Heritage Projects</p>
+                    <p>🌍 Multicultural Programming</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Listen Live</h4>
+                    <p>📻 97.0 FM (Rochdale Area)</p>
+                    <p>🌐 Online Streaming</p>
+                    <p>📱 Mobile Friendly</p>
+                    <p>🔴 Broadcasting 24/7</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Crescent Community Radio. All rights reserved.</p>
+                <p>A grassroots community organisation serving Rochdale since 1999</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Audio player functionality (placeholder - would need actual streaming URL)
+        let isPlaying = false;
+        function toggleAudio() {
+            const button = document.querySelector('.play-button');
+            if (!isPlaying) {
+                button.innerHTML = '⏸️ Stop Stream';
+                button.style.background = '#e74c3c';
+                isPlaying = true;
+                // In a real implementation, you would start the audio stream here
+                console.log('Starting audio stream...');
+            } else {
+                button.innerHTML = '▶️ Play Live Stream';
+                button.style.background = '#4CAF50';
+                isPlaying = false;
+                // In a real implementation, you would stop the audio stream here
+                console.log('Stopping audio stream...');
+            }
+        }
+
+        // Contact form submission (if needed)
+        function submitContactForm(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+        }
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
